@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.studentmanager.StudentController">
+    <Label text="Welcome, Student!" style="-fx-font-size: 20px;"/>
+    <Button text="View Marks"/>
+    <Button text="Logout" onAction="#logout"/>
+</VBox>
