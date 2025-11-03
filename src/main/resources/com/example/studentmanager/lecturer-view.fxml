@@ -1,11 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.studentmanager.LecturerController">
-    <Label text="Welcome, Lecturer!" style="-fx-font-size: 20px;"/>
-    <Button text="View Students"/>
-    <Button text="Logout" onAction="#logout"/>
-</VBox>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studentmanager.LecturerController">
+   <top>
+      <VBox>
+         <Label text="Lecturer Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;">
+            <padding>
+               <Insets bottom="10" left="10" right="10" top="10"/>
+            </padding>
+         </Label>
+         <Separator/>
+      </VBox>
+   </top>
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Update Marks">
+               <VBox spacing="10">
+                  <padding>
+                     <Insets top="10" right="10" bottom="10" left="10"/>
+                  </padding>
+                  <Label text="Update Student Marks" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                  
+                  <HBox spacing="10">
+                     <Label text="Course:" minWidth="100"/>
+                     <ComboBox fx:id="marksCourseCombo" prefWidth="250" promptText="Select Course"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="Student:" minWidth="100"/>
+                     <ComboBox fx:id="marksStudentCombo" prefWidth="250" promptText="Select Student"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="CAT 1:" minWidth="100"/>
+                     <TextField fx:id="cat1Field" prefWidth="250" promptText="Enter score (0-100)"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="CAT 2:" minWidth="100"/>
+                     <TextField fx:id="cat2Field" prefWidth="250" promptText="Enter score (0-100)"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="CAT 3:" minWidth="100"/>
+                     <TextField fx:id="cat3Field" prefWidth="250" promptText="Enter score (0-100)"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="Final Exam:" minWidth="100"/>
+                     <TextField fx:id="finalExamField" prefWidth="250" promptText="Enter score (0-100)"/>
+                  </HBox>
+                  
+                  <Button text="Update Marks" onAction="#handleUpdateMarks" prefWidth="200"/>
+                  <Label fx:id="marksMessageLabel" textFill="green"/>
+                  
+                  <Separator/>
+                  
+                  <Label text="Marks Overview" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                  <TableView fx:id="marksTable" prefHeight="300">
+                     <columns>
+                        <TableColumn fx:id="marksCourseColumn" text="Course" prefWidth="150"/>
+                        <TableColumn fx:id="marksStudentColumn" text="Student" prefWidth="150"/>
+                        <TableColumn fx:id="marksCat1Column" text="CAT 1" prefWidth="80"/>
+                        <TableColumn fx:id="marksCat2Column" text="CAT 2" prefWidth="80"/>
+                        <TableColumn fx:id="marksCat3Column" text="CAT 3" prefWidth="80"/>
+                        <TableColumn fx:id="marksFinalColumn" text="Final" prefWidth="80"/>
+                        <TableColumn fx:id="marksGradeColumn" text="Grade" prefWidth="80"/>
+                     </columns>
+                  </TableView>
+               </VBox>
+            </Tab>
+            
+            <Tab text="Update Attendance">
+               <VBox spacing="10">
+                  <padding>
+                     <Insets top="10" right="10" bottom="10" left="10"/>
+                  </padding>
+                  <Label text="Update Student Attendance" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                  
+                  <HBox spacing="10">
+                     <Label text="Course:" minWidth="100"/>
+                     <ComboBox fx:id="attendanceCourseCombo" prefWidth="250" promptText="Select Course"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="Student:" minWidth="100"/>
+                     <ComboBox fx:id="attendanceStudentCombo" prefWidth="250" promptText="Select Student"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="Date:" minWidth="100"/>
+                     <DatePicker fx:id="attendanceDatePicker" prefWidth="250"/>
+                  </HBox>
+                  
+                  <HBox spacing="10">
+                     <Label text="Status:" minWidth="100"/>
+                     <ComboBox fx:id="attendanceStatusCombo" prefWidth="250" promptText="Select Status"/>
+                  </HBox>
+                  
+                  <Button text="Record Attendance" onAction="#handleUpdateAttendance" prefWidth="200"/>
+                  <Label fx:id="attendanceMessageLabel" textFill="green"/>
+                  
+                  <Separator/>
+                  
+                  <Label text="Attendance Overview" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                  <TableView fx:id="attendanceTable" prefHeight="300">
+                     <columns>
+                        <TableColumn fx:id="attendanceCourseColumn" text="Course" prefWidth="150"/>
+                        <TableColumn fx:id="attendanceStudentColumn" text="Student" prefWidth="150"/>
+                        <TableColumn fx:id="attendanceDateColumn" text="Date" prefWidth="150"/>
+                        <TableColumn fx:id="attendanceStatusColumn" text="Status" prefWidth="150"/>
+                     </columns>
+                  </TableView>
+               </VBox>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Button text="Logout" onAction="#logout"/>
+      </HBox>
+   </bottom>
+</BorderPane>
