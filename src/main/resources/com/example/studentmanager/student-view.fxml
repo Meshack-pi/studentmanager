@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.studentmanager.StudentController">
-    <Label text="Welcome, Student!" style="-fx-font-size: 20px;"/>
-    <Button text="View Marks"/>
-    <Button text="Logout" onAction="#logout"/>
-</VBox>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studentmanager.StudentController">
+   <top>
+      <VBox>
+         <Label text="Student Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;">
+            <padding>
+               <Insets bottom="10" left="10" right="10" top="10"/>
+            </padding>
+         </Label>
+         <Separator/>
+      </VBox>
+   </top>
+   <left>
+      <VBox spacing="10" minWidth="200">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Label text="Profile" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+         <Label fx:id="studentNameLabel" text="Name: "/>
+         <Label fx:id="studentIdLabel" text="Student ID: "/>
+      </VBox>
+   </left>
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Marks">
+               <VBox spacing="10">
+                  <padding>
+                     <Insets top="10" right="10" bottom="10" left="10"/>
+                  </padding>
+                  <Label text="My Marks" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                  <TableView fx:id="marksTable" prefHeight="400">
+                     <columns>
+                        <TableColumn fx:id="courseColumn" text="Course" prefWidth="150"/>
+                        <TableColumn fx:id="cat1Column" text="CAT 1" prefWidth="80"/>
+                        <TableColumn fx:id="cat2Column" text="CAT 2" prefWidth="80"/>
+                        <TableColumn fx:id="cat3Column" text="CAT 3" prefWidth="80"/>
+                        <TableColumn fx:id="finalColumn" text="Final Exam" prefWidth="100"/>
+                        <TableColumn fx:id="gradeColumn" text="Overall Grade" prefWidth="120"/>
+                     </columns>
+                  </TableView>
+               </VBox>
+            </Tab>
+            
+            <Tab text="Course Registration">
+               <VBox spacing="10">
+                  <padding>
+                     <Insets top="10" right="10" bottom="10" left="10"/>
+                  </padding>
+                  <Label text="Register for Courses" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                  
+                  <HBox spacing="10">
+                     <Label text="Available Courses:" minWidth="150"/>
+                     <ComboBox fx:id="availableCoursesCombo" prefWidth="300" promptText="Select a course"/>
+                  </HBox>
+                  
+                  <Button text="Register" onAction="#handleRegisterCourse" prefWidth="200"/>
+                  <Label fx:id="registerMessageLabel" textFill="green"/>
+                  
+                  <Separator/>
+                  
+                  <Label text="My Enrolled Courses" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                  <ListView fx:id="enrolledCoursesList" prefHeight="200"/>
+               </VBox>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Button text="Logout" onAction="#logout"/>
+      </HBox>
+   </bottom>
+</BorderPane>

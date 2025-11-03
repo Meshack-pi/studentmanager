@@ -1,0 +1,37 @@
+[
+  {
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "username": "lecturer1",
+    "password": "1234",
+    "role": "lecturer"
+  },
+  {
+    "username": "lecturer2",
+    "password": "1234",
+    "role": "lecturer"
+  },
+  {
+    "username": "student1",
+    "password": "abcd",
+    "role": "student"
+  },
+  {
+    "username": "student2",
+    "password": "abcd",
+    "role": "student"
+  },
+  {
+    "username": "guardian1",
+    "password": "guard123",
+    "role": "guardian"
+  },
+  {
+    "username": "meshack",
+    "password": "1234",
+    "role": "student"
+  }
+]

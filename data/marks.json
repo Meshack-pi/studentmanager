@@ -1,0 +1,38 @@
+[
+  {
+    "studentId": "ST001",
+    "courseId": "CS101",
+    "cat1Score": 85.0,
+    "cat2Score": 90.0,
+    "cat3Score": 88.0,
+    "finalExamScore": 92.0,
+    "overallGrade": "B"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "cat1Score": 78.0,
+    "cat2Score": 82.0,
+    "cat3Score": 80.0,
+    "finalExamScore": 85.0,
+    "overallGrade": "B"
+  },
+  {
+    "studentId": "ST002",
+    "courseId": "CS101",
+    "cat1Score": 90.0,
+    "cat2Score": 88.0,
+    "cat3Score": 91.0,
+    "finalExamScore": 89.0,
+    "overallGrade": "B"
+  },
+  {
+    "studentId": "204011",
+    "courseId": "MATH101",
+    "cat1Score": 90.0,
+    "cat2Score": 70.0,
+    "cat3Score": 40.0,
+    "finalExamScore": 80.0,
+    "overallGrade": "C"
+  }
+]

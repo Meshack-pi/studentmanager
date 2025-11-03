@@ -1,0 +1,56 @@
+[
+  {
+    "studentId": "ST001",
+    "courseId": "CS101",
+    "date": "2025-10-27",
+    "status": "present"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "CS101",
+    "date": "2025-10-29",
+    "status": "present"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "CS101",
+    "date": "2025-10-31",
+    "status": "absent"
+  },
+  {
+    "studentId": "ST002",
+    "courseId": "CS101",
+    "date": "2025-10-27",
+    "status": "present"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "date": "2025-11-27",
+    "status": "present"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "date": "2025-11-04",
+    "status": "present"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "date": "2025-11-04",
+    "status": "absent"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "date": "2025-11-20",
+    "status": "absent"
+  },
+  {
+    "studentId": "ST001",
+    "courseId": "MATH101",
+    "date": "2027-11-19",
+    "status": "absent"
+  }
+]

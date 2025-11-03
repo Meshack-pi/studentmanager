@@ -1,0 +1,21 @@
+[
+  {
+    "lecturerId": "LEC001",
+    "name": "Dr. Alice Brown",
+    "email": "alice@example.com",
+    "username": "lecturer1",
+    "assignedCourseIds": [
+      "CS101",
+      "ENG101"
+    ]
+  },
+  {
+    "lecturerId": "LEC002",
+    "name": "Prof. Bob Wilson",
+    "email": "bob@example.com",
+    "username": "lecturer2",
+    "assignedCourseIds": [
+      "MATH101"
+    ]
+  }
+]

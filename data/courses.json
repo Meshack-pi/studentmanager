@@ -1,0 +1,20 @@
+[
+  {
+    "courseId": "CS101",
+    "courseName": "Introduction to Computer Science",
+    "code": "CS101",
+    "lecturerId": "LEC001"
+  },
+  {
+    "courseId": "MATH101",
+    "courseName": "Calculus I",
+    "code": "MATH101",
+    "lecturerId": "LEC002"
+  },
+  {
+    "courseId": "ENG101",
+    "courseName": "English Composition",
+    "code": "ENG101",
+    "lecturerId": "LEC001"
+  }
+]

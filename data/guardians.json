@@ -1,0 +1,13 @@
+[
+  {
+    "guardianId": "GU001",
+    "name": "Mary Doe",
+    "email": "mary@example.com",
+    "username": "guardian1",
+    "linkedStudentIds": [
+      "ST001",
+      "ST002",
+      "204011"
+    ]
+  }
+]

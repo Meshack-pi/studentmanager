@@ -1,0 +1,33 @@
+[
+  {
+    "studentId": "ST001",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "username": "student1",
+    "enrolledCourseIds": [
+      "CS101",
+      "MATH101",
+      "ENG101"
+    ]
+  },
+  {
+    "studentId": "ST002",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "username": "student2",
+    "enrolledCourseIds": [
+      "CS101",
+      "ENG101"
+    ]
+  },
+  {
+    "studentId": "204011",
+    "name": "1234",
+    "email": "meshack@gmail.com",
+    "username": "meshack",
+    "enrolledCourseIds": [
+      "MATH101",
+      "CS101"
+    ]
+  }
+]
