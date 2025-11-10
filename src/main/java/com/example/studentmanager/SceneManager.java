@@ -19,7 +19,7 @@ public class SceneManager {
     }
     
     public static void loadLoginScene(Stage stage) throws IOException {
-        loadScene(stage, "login.fxml", 600, 600);
+        loadScene(stage, "login.fxml", 560, 500);
         stage.setTitle("Student Manager Login");
     }
     
